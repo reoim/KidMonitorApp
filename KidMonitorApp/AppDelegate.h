@@ -1,0 +1,17 @@
+//
+//  AppDelegate.h
+//  KidMonitorApp
+//
+//  Created by Reo Lee on 5/05/2015.
+//  Copyright (c) 2015 reoim. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
+
+@end
+
