@@ -11,6 +11,8 @@
 #import "CurrentChildClass.h"
 #import "RecordTableViewCell.h"
 #import "ActivityId.h"
+#import "SignInViewController.h"
+#import "KidListTableViewController.h"
 
 @interface RecordTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
     NSArray *activityLog;
@@ -18,5 +20,8 @@
 }
 @property (weak, nonatomic) IBOutlet UITableView *activityLogTable;
 @property (strong, nonatomic) NSString *currentChildId;
+
+- (IBAction)changeKidButton:(id)sender;
+- (IBAction)signOutButton:(id)sender;
 
 @end

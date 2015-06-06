@@ -11,6 +11,8 @@
 #import "GraphSharedInfo.h"
 #import <Parse/Parse.h>
 #import "CurrentChildClass.h"
+#import "SignInViewController.h"
+#import "KidListTableViewController.h"
 
 @interface GraphViewController : UIViewController <SChartDatasource, SChartDelegate> {
     NSArray *graphData;
@@ -20,4 +22,8 @@
 @property (strong, nonatomic) NSString *currentChildId;
 @property (strong, nonatomic) NSString *todayDate;
 @property (strong, nonatomic) NSString *thisMonth;
+
+- (IBAction)changeKidbutton:(id)sender;
+- (IBAction)signOutButton:(id)sender;
+
 @end

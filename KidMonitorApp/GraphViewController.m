@@ -251,4 +251,27 @@
 }
 
 
+- (IBAction)changeKidbutton:(id)sender {
+    
+    KidListTableViewController *kidListTableVC = [self.storyboard instantiateViewControllerWithIdentifier:@"KidListTableViewController"];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:kidListTableVC];
+    [self presentViewController:nav animated:YES completion:nil];
+    
+}
+
+- (IBAction)signOutButton:(id)sender {
+    
+    [PFUser logOut];
+    PFUser *currentUser = [PFUser currentUser];
+    
+    if (!currentUser) {
+        SignInViewController *signInVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:signInVC];
+        [self presentViewController:nav animated:YES completion:nil];
+        
+    } else {
+        NSLog(@"%@", currentUser.username);
+    }
+    
+}
 @end

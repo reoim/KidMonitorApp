@@ -11,10 +11,12 @@
 #import "RecordTableViewCell.h"
 #import "RecordTableViewController.h"
 #import "SignInViewController.h"
+#import "KidListTableViewController.h"
 
 
 @interface CategoryViewController : UIViewController
 
 - (IBAction)SignOutButton:(id)sender;
+- (IBAction)changeKidButton:(id)sender;
 
 @end

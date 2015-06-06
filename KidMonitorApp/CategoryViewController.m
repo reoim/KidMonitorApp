@@ -54,4 +54,10 @@
     
 }
 
+- (IBAction)changeKidButton:(id)sender {
+    KidListTableViewController *kidListTableVC = [self.storyboard instantiateViewControllerWithIdentifier:@"KidListTableViewController"];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:kidListTableVC];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
 @end
